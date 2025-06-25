@@ -1,4 +1,4 @@
-const Add = function (input) {
+const Add = (input) =>{
   if (!input) return 0;
   const numbers = extractNumbers(input);
   const negatives = numbers.filter((n) => n < 0);
@@ -10,7 +10,7 @@ const Add = function (input) {
   return sum;
 };
 
-const extractNumbers = function (str) {
+const extractNumbers = (str) =>{
   return (
     str
       .match(/\d+/g)
@@ -19,4 +19,4 @@ const extractNumbers = function (str) {
   );
 };
 
-Add("//1,2***,3400");
+export default Add
