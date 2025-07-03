@@ -36,6 +36,11 @@ describe("String Calculator", () => {
   });
 
   test("Should throw error when encountered with invalid string", () => {
-    expect(() => add("1,2,ab,cd,5")).toThrow("Invalid Number");
+    expect(() => add("1,2,ab,cd,5")).toThrow("Invalid Number: ab,cd");
   });
+    test("Should throw error when encountered with invalid string", () => {
+    expect(() => add("//[***][%%]\n1***cd%%3")).toThrow("Invalid Number: cd");
+  });
+
+
 });
