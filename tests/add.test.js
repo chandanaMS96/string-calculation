@@ -34,4 +34,8 @@ describe("String Calculator", () => {
   test("Should supports multiple delimiterShould s of different lengths", () => {
     expect(add("//[***][%%]\n1***2%%3")).toBe(6);
   });
+
+  test("Should throw error when encountered with invalid string", () => {
+    expect(() => add("1,2,ab,cd,5")).toThrow("Invalid Number");
+  });
 });

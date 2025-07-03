@@ -6,6 +6,9 @@ const add = (input) => {
 };
 
 const extractNumbers = (str) => {
+  if (str.match(/[A-Za-z]/g)) {
+    throw new Error("Invalid Number");
+  }
   const numbers = str.match(/-?\d+/g)?.map(Number) || [];
   const negatives = numbers.filter((n) => n < 0);
 
